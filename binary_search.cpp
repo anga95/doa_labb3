@@ -3,8 +3,6 @@
 //
 
 #include "binary_search.h"
-#include "SearchData.h"
-#include "Timer.h"
 
 int binarySearch(const std::vector<int> &primes, int target_value) {
     int low = 0;

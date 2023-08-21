@@ -20,7 +20,7 @@ void BinarySearchTree::insert(int value, BinarySearchTreeNode*& node){
     if (node == nullptr){
         node = new BinarySearchTreeNode{value, nullptr, nullptr};
     }else if (value < node->data){
-        insert(value, node->left);
+        insert(value, node->left); 
     }else if (value > node->data){
         insert(value, node->right);
     }

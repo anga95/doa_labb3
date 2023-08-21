@@ -10,12 +10,6 @@
 #include "Measurement.h"
 
 
-//int randomTargetPrimeNumber(std::vector<int>& arr){
-//    std::random_device rd;
-//    std::mt19937 gen(rd());
-//    std::uniform_int_distribution<> distr(0, arr.size() - 1);
-//    return arr[distr(gen)];
-//}
 
 int main() {
     int number_of_primes = 100'000;

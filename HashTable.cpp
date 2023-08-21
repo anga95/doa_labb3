@@ -18,12 +18,12 @@ void HashTable::insert(int data){
     new_node->next = std::move(item);
     item = std::move(new_node);
 }
-int HashTable::search(int data){
-    int hash = data % reserved_size;
+int HashTable::search(int value){
+    int hash = value % reserved_size;
 
     HashTableNode* node = table[hash].get();
     while(node != nullptr){
-        if(node->data == data){
+        if(node->data == value){
             return node->data;
         }
         node = node->next.get();

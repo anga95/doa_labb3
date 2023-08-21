@@ -26,7 +26,7 @@ private:
 public:
     HashTable(const std::vector<int>& primes);
     void insert(int data);
-    int search(int data);
+    int search(int value);
 //    SearchData measureHashTable(std::vector<int> &primes, int target_value);
 };
 
