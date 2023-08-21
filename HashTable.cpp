@@ -30,18 +30,3 @@ int HashTable::search(int value){
     }
     return -1;
 }
-
-//SearchData measureHashTable(std::vector<int> &primes, int target_value) {
-//    HashTable hashTable(primes);
-//
-//    Timer timer;
-//    timer.start();
-//    hashTable.search(target_value);
-//    timer.stop();
-//
-//    SearchData data;
-//    data.method = "Hash Table";
-//    data.dataSize = primes.size();
-//    data.timeTaken = timer.elapsedMilliseconds();
-//    return data;
-//}
