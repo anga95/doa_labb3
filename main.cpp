@@ -12,11 +12,11 @@
 
 
 int main() {
-    int number_of_primes = 100'000;
+    int number_of_primes = 150'000;
     std::vector<int> primes = generate_primes(number_of_primes);
     int primes_size = primes.size();
     int tenth_of_primes_size = primes_size / 10;
-    int samples = 1000;
+    int samples = 100000;
 
 
     std::cout << "starting searches..." << std::endl;

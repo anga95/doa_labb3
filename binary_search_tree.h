@@ -30,6 +30,7 @@ private:
     void insert(int value, BinarySearchTreeNode*& node);
     BinarySearchTreeNode* search(int value, BinarySearchTreeNode* node) const;
     void clear(BinarySearchTreeNode* node);
+    void buildBalancedTree(const std::vector<int>& sorted_data, int start, int end);
 };
 
 

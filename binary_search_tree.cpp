@@ -7,9 +7,7 @@
 BinarySearchTree::BinarySearchTree() : root(nullptr) {}
 
 BinarySearchTree::BinarySearchTree(const std::vector<int> &primes) : root(nullptr) {
-    for (int value : primes){
-        insert(value);
-    }
+    buildBalancedTree(primes, 0, primes.size()-1);
 }
 
 void BinarySearchTree::insert(int value) {
@@ -53,12 +51,11 @@ void BinarySearchTree::clear(BinarySearchTreeNode *node) {
         delete node;
     }
 }
-
-//SearchData BinarySearchTree::measureBinarySearchTree(std::vector<int> &primes, int target_value) {
-//    Timer timer;
-//    BinarySearchTree tree(primes);
-//    timer.start();
-//    BinarySearchTreeNode* node = tree.search(target_value);
-//    timer.stop();
-//    return SearchData{timer.getDuration(), node != nullptr};
-//}
+void BinarySearchTree::buildBalancedTree(const std::vector<int>& sorted_data, int start, int end) {
+    if (start <= end) {
+        int mid = start + (end - start) / 2;
+        insert(sorted_data[mid]);
+        buildBalancedTree(sorted_data, start, mid-1);
+        buildBalancedTree(sorted_data, mid+1, end);
+    }
+}

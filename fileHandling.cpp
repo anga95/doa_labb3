@@ -23,12 +23,12 @@ void writeToFile(const std::vector<SearchData>& results) {
     std::ofstream outPutFile(filename);
 
 
-    outPutFile << "Algorithm,Data size,Time taken(ms),Stdev(ms),Samples" << std::endl;
+    outPutFile << "Algorithm,Data size,Time taken(ns),Stdev(ns),Samples" << std::endl;
     for (const auto& result : results) {
         outPutFile << result.method << ","
                    << result.dataSize << ","
-                   << result.timeTaken / 1000.0<< ","
-                   << result.standardDeviation / 1000.0 << ","
+                   << result.timeTaken << ","
+                   << result.standardDeviation << ","
                    << result.sampleCount << ","
                    << std::endl;
     }
